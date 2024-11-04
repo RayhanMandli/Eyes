@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  margin: 0;
+  background: #000; /* Remove default margin */
+}
+.title-bg {
+  background: #17e200;
+  height: fit-content;
+  width: 100vw;
+  margin-bottom: 20px;
+}
+
+.title {
+  padding: 20px;
+  display: flex;
+  background: #17e200;
+  width: fit-content;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 3rem;
+    white-space: nowrap;
+  gap: 20px;
+  animation: translate 10s linear 1s infinite;
+  font-weight: bold;
+}
+@keyframes translate {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.container {
+  background-color: red; /* Red background */
+  width: 500px; /* Example width */
+  height: 300px; /* Example height */
+  position: relative; /* Relative positioning for child elements */
+  border-radius: 20px;
+  display: flex;
+  justify-content: center; /* Space between the circles */
+  align-items: center; /* Center align vertically */
+  padding: 20px;
+  gap: 10px;
+  box-shadow: 1px 2px 20px #ff0000; /* Padding around the circles */
+}
+.circle {
+  width: 50%;
+  height: 250px; /* Circle height */
+  border-radius: 50%; /* Make it a circle */
+  background-color: white; /* Circle background color */
+  position: relative; /* Position relative for child elements */
+}
+.inner-circle1,
+.inner-circle2 {
+  width: 70%; /* Smaller than the main circle */
+  height: 70%; /* Smaller than the main circle */
+  background-color: black; /* Black background */
+  border-radius: 50%; /* Make it a circle */
+  position: absolute; /* Absolute positioning */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for centering */
+  display: flex; /* Center the line and small circle */
+  justify-content: center; /* Center line */
+  align-items: center; /* Center vertically */
+}
+.line1,
+.line2 {
+  width: 80%; /* Full width */
+  height: 30px; /* Line height */
+  background-color: black; /* Line color */
+  position: absolute; /* Absolute positioning */
+  top: 50%; /* Center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjust for vertical centering */
+}
+.small-circle {
+  width: 30px; /* Small circle width */
+  height: 100%; /* Small circle height */
+  background-color: rgb(255, 255, 255); /* Small circle color */
+  border-radius: 50%; /* Make it a circle */
+  position: absolute; /* Absolute positioning */
+}
